@@ -3,7 +3,7 @@
 client_id = "1e33eacef970f259a8d20901d443c42f"
 name = "snapshots-app-2"
 handle = "snapshots-app-2"
-application_url = "https://affordable-lean-bench-usa.trycloudflare.com"
+application_url = "https://tab-disputes-rate-suffer.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://affordable-lean-bench-usa.trycloudflare.com/auth/callback",
-  "https://affordable-lean-bench-usa.trycloudflare.com/auth/shopify/callback",
-  "https://affordable-lean-bench-usa.trycloudflare.com/api/auth/callback"
+  "https://tab-disputes-rate-suffer.trycloudflare.com/auth/callback",
+  "https://tab-disputes-rate-suffer.trycloudflare.com/auth/shopify/callback",
+  "https://tab-disputes-rate-suffer.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

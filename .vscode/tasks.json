@@ -18,5 +18,80 @@
         "group": "jobsProcess"
       }
     },
+    {
+      "label": "CloudflaredTunnel",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; cloudflared tunnel --url http://localhost:3000",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "jobsProcess"
+      }
+    },
+    {
+      "label": "SetCapacity",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; sudo sysctl -w net.core.rmem_max=7500000 ; sudo sysctl -w net.core.wmem_max=7500000",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "jobsProcess"
+      }
+    },
+    {
+      "label": "CloudflaredTunnel",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; cloudflared tunnel --url http://localhost:3000",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "jobsProcess"
+      }
+    },
+    {
+      "label": "NpmRunDevTunnelUrl",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; npm run dev -- --tunnel-url https://tunnel-url:3000",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "jobsProcess"
+      }
+    },
+    {
+      "label": "NpmRunDev",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; npm run dev ",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "jobsProcess"
+      }
+    },
   ]
 }
