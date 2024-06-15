@@ -14,7 +14,7 @@ module ShopifyAppTemplateRuby
     config.load_defaults(7.0)
 
     config.assets.prefix = "/api/assets"
-    config.hosts << "aee1-186-107-207-123.ngrok-free.app"
+    config.hosts << "complete-gator-teaching.ngrok-free.app"
 
     if ShopifyAPI::Context.embedded?
       config.action_dispatch.default_headers = config.action_dispatch.default_headers.merge({

@@ -1,0 +1,22 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "NgrokShopify",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; ngrok http --domain=complete-gator-teaching.ngrok-free.app  http://localhost:3000",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "jobsProcess"
+      }
+    },
+  ]
+}
