@@ -4,6 +4,8 @@ import { fileURLToPath } from "url";
 import https from "https";
 import react from "@vitejs/plugin-react";
 
+const server = "https://localhost:3000";
+
 if (
   process.env.npm_lifecycle_event === "build" &&
   !process.env.CI &&
@@ -14,6 +16,12 @@ if (
   );
 }
 
+// const proxyOptions = {
+//   target: `http://127.0.0.1:${process.env.BACKEND_PORT}`,
+//   changeOrigin: false,
+//   secure: true,
+//   ws: false,
+// };
 const proxyOptions = {
   target: `http://127.0.0.1:${process.env.BACKEND_PORT}`,
   changeOrigin: false,
