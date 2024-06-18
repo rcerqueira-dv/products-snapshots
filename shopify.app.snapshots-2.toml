@@ -3,18 +3,23 @@
 client_id = "e1bf507384b33ba72da1b5375d7b3bfa"
 name = "snapshots 2"
 handle = "snapshots-2"
-application_url = "https://lawsuit-whats-knives-tulsa.trycloudflare.com"
+application_url = "https://focused-shipped-complement-img.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "quickstart-614f6c82.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://lawsuit-whats-knives-tulsa.trycloudflare.com/auth/callback",
-  "https://lawsuit-whats-knives-tulsa.trycloudflare.com/auth/shopify/callback",
-  "https://lawsuit-whats-knives-tulsa.trycloudflare.com/api/auth/callback"
+  "https://focused-shipped-complement-img.trycloudflare.com/auth/callback",
+  "https://focused-shipped-complement-img.trycloudflare.com/auth/shopify/callback",
+  "https://focused-shipped-complement-img.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

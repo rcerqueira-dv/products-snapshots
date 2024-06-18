@@ -93,5 +93,28 @@
         "group": "jobsProcess"
       }
     },
+    {
+      "label": "Deploy",
+      "type": "shell",
+      "linux": {
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ;  npm run shopify app deploy",
+      },
+      "options": {
+        "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "Terminal"
+      }
+    },
+    {
+      "label": "Start Proyect",
+      "dependsOn": [
+        "NgrokShopify",
+        "NpmRunDev"
+      ],
+      "dependsOrder": "parallel"
+    },
   ]
 }

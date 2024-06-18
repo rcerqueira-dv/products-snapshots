@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  admin:
+    backup_name: "Previous products"
