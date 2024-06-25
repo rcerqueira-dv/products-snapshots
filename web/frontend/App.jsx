@@ -26,6 +26,18 @@ export default function App() {
                   label: t("NavigationMenu.pageName"),
                   destination: "/pagename",
                 },
+                {
+                  label: t("NavigationMenu.productSnapshot.create"),
+                  destination: "/ProductsSnapshots/CreateProductSnapshotPage",
+                },
+                {
+                  label: t("NavigationMenu.productSnapshot.index"),
+                  destination: "/ProductsSnapshots/IndexProductSnapshotPage",
+                },
+                {
+                  label: t("NavigationMenu.productSnapshot.settings"),
+                  destination: "/ProductsSnapshots/ProductSnapshotSettingsPage",
+                },
               ]}
             />
             <Routes pages={pages} />
