@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  product_snapshot_frequency: MyString
+  time_frequency: MyString
 
 two:
-  product_snapshot_frequency: MyString
+  time_frequency: MyString

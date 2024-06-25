@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_25_060743) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_25_231025) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_25_060743) do
     t.datetime "updated_at", null: false
     t.string "access_scopes"
     t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
+  end
+
+  create_table "snapshot_settings", force: :cascade do |t|
+    t.string "time_frequency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

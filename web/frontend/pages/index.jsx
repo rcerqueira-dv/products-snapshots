@@ -1,5 +1,5 @@
 import {
-  Card,
+  AlphaCard,
   Page,
   Layout,
   VerticalStack,
@@ -22,7 +22,7 @@ export default function HomePage() {
       <TitleBar title={t("HomePage.title")} primaryAction={null} />
       <Layout>
         <Layout.Section>
-          <Card sectioned>
+          <AlphaCard sectioned>
             <LegacyStack
               wrap={false}
               spacing="extraTight"
@@ -82,7 +82,7 @@ export default function HomePage() {
                 </div>
               </LegacyStack.Item>
             </LegacyStack>
-          </Card>
+          </AlphaCard>
         </Layout.Section>
         <Layout.Section>
           <ProductsCard />

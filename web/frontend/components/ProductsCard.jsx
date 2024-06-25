@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, TextContainer, Text } from "@shopify/polaris";
+import { AlphaCard, TextContainer, Text } from "@shopify/polaris";
 import { Toast } from "@shopify/app-bridge-react";
 import { useTranslation } from "react-i18next";
 import { useAppQuery, useAuthenticatedFetch } from "../hooks";
@@ -32,7 +32,7 @@ export function ProductsCard() {
 
   const handlePopulate = async () => {
     setIsLoading(true);
-    const response = await fetch("/api/products", {method: "POST"});
+    const response = await fetch("/api/products", { method: "POST" });
 
     if (response.ok) {
       await refetchProductCount();
@@ -53,7 +53,7 @@ export function ProductsCard() {
   return (
     <>
       {toastMarkup}
-      <Card
+      <AlphaCard
         title={t("ProductsCard.title")}
         sectioned
         primaryFooterAction={{
@@ -73,7 +73,7 @@ export function ProductsCard() {
             </Text>
           </Text>
         </TextContainer>
-      </Card>
+      </AlphaCard>
     </>
   );
 }

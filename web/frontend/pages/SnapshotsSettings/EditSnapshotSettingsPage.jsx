@@ -33,7 +33,7 @@
 //         headers: {
 //           'Content-Type': 'application/json',
 //         },
-//         body: JSON.stringify({ setting: { product_snapshot_frequency: frequency } }),
+//         body: JSON.stringify({ setting: { time_frequency: frequency } }),
 //       });
 //       if (!response.ok) {
 //         throw new Error('Failed to update setting');
