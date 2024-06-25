@@ -18,6 +18,11 @@ Rails.application.routes.draw do
         get :count
       end
     end
+
+    namespace :v1 do
+      resources :product_snapshots
+      resources :settings, except: [:new, :create, :destroy]
+    end
   end
 
   # Any other routes will just render the react app

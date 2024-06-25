@@ -7,7 +7,7 @@
       "label": "NgrokShopify",
       "type": "shell",
       "linux": {
-        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; ngrok http --domain=complete-gator-teaching.ngrok-free.app  http://localhost:3000",
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; nvm use 18.18; ngrok http --domain=complete-gator-teaching.ngrok-free.app  http://localhost:3000",
       },
       "options": {
         "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
@@ -67,7 +67,7 @@
       "label": "NpmRunDevTunnelUrl",
       "type": "shell",
       "linux": {
-        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; npm run dev -- --tunnel-url https://tunnel-url:3000",
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; nvm use 18.18 ; rvm use 3.3.0 ; npm run dev -- --tunnel-url https://tunnel-url:3000",
       },
       "options": {
         "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"
@@ -82,7 +82,7 @@
       "label": "NpmRunDev",
       "type": "shell",
       "linux": {
-        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; npm run dev ",
+        "command": "source ~/.bash_profile ; . ~/.nvm/nvm.sh ; nvm use 18.18 ; rvm use 3.3.0 ; npm run dev ",
       },
       "options": {
         "cwd": "/home/cerqueira/Proyectos/Personal/staytuned/snapshots-app"

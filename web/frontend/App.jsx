@@ -36,8 +36,8 @@ export default function App() {
                 },
                 {
                   label: t("NavigationMenu.productSnapshot.settings"),
-                  destination: "/ProductsSnapshots/ProductSnapshotSettingsPage",
-                },
+                  destination: "/SnapshotsSettings/EditSnapshotSettingsPage",
+                }
               ]}
             />
             <Routes pages={pages} />
