@@ -22,15 +22,15 @@ The Ruby app template comes with the following out-of-the-box functionality:
 
 These third party tools are complemented by Shopify specific tools to ease app development:
 
-| Tool | Usage |
-|---------|---------|
-| [Shopify App](https://github.com/Shopify/shopify_app) | Rails engine to help build Shopify app using Rails conventions. Helps to install your application on shops, and provides tools for: <li>OAuth</li><li>Session Storage</li><li>Webhook Processing</li><li>etc.</li> |
-| [ShopifyAPI Gem](https://github.com/Shopify/shopify-api-ruby) | A lightweight gem to provide tools for: <br/><li>Obtaining an active session. (`ShopifyApp` uses this behind the scenes to handle OAuth)</li><li>Clients to make request to Shopify GraphQL and Rest APIs. See how it's used [here](#making-your-first-api-call)</li><li>Error handling</li><li>Application Logger</li><li>Webhook Management</li> |
-| [App Bridge](https://shopify.dev/docs/apps/tools/app-bridge), </br>[App Bridge React](https://shopify.dev/docs/apps/tools/app-bridge/getting-started/using-react)| Frontend library that: <li>Add authentication to API requests in the frontend</li><li>Renders components outside of the App’s iFrame in Shopify's Admin page</li> |
-| [Custom React hooks](https://github.com/Shopify/shopify-frontend-template-react/tree/main/hooks) | Custom React hooks that uses App Bridge to make authenticated requests to the Admin API. |
-| [Polaris React](https://polaris.shopify.com/) | A powerful design system and react component library that helps developers build high quality, consistent experiences for Shopify merchants. |
-| [File-based routing](https://github.com/Shopify/shopify-frontend-template-react/blob/main/Routes.jsx) | Tool makes creating new pages easier. |
-| [`@shopify/i18next-shopify`](https://github.com/Shopify/i18next-shopify) | A plugin for [`i18next`](https://www.i18next.com/) that allows translation files to follow the same JSON schema used by Shopify [app extensions](https://shopify.dev/docs/apps/checkout/best-practices/localizing-ui-extensions#how-it-works) and [themes](https://shopify.dev/docs/themes/architecture/locales/storefront-locale-files#usage). |
+| Tool                                                                                                                                                              | Usage                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Shopify App](https://github.com/Shopify/shopify_app)                                                                                                             | Rails engine to help build Shopify app using Rails conventions. Helps to install your application on shops, and provides tools for: <li>OAuth</li><li>Session Storage</li><li>Webhook Processing</li><li>etc.</li>                                                                                                                                 |
+| [ShopifyAPI Gem](https://github.com/Shopify/shopify-api-ruby)                                                                                                     | A lightweight gem to provide tools for: <br/><li>Obtaining an active session. (`ShopifyApp` uses this behind the scenes to handle OAuth)</li><li>Clients to make request to Shopify GraphQL and Rest APIs. See how it's used [here](#making-your-first-api-call)</li><li>Error handling</li><li>Application Logger</li><li>Webhook Management</li> |
+| [App Bridge](https://shopify.dev/docs/apps/tools/app-bridge), </br>[App Bridge React](https://shopify.dev/docs/apps/tools/app-bridge/getting-started/using-react) | Frontend library that: <li>Add authentication to API requests in the frontend</li><li>Renders components outside of the App’s iFrame in Shopify's Admin page</li>                                                                                                                                                                                  |
+| [Custom React hooks](https://github.com/Shopify/shopify-frontend-template-react/tree/main/hooks)                                                                  | Custom React hooks that uses App Bridge to make authenticated requests to the Admin API.                                                                                                                                                                                                                                                           |
+| [Polaris React](https://polaris.shopify.com/)                                                                                                                     | A powerful design system and react component library that helps developers build high quality, consistent experiences for Shopify merchants.                                                                                                                                                                                                       |
+| [File-based routing](https://github.com/Shopify/shopify-frontend-template-react/blob/main/Routes.jsx)                                                             | Tool makes creating new pages easier.                                                                                                                                                                                                                                                                                                              |
+| [`@shopify/i18next-shopify`](https://github.com/Shopify/i18next-shopify)                                                                                          | A plugin for [`i18next`](https://www.i18next.com/) that allows translation files to follow the same JSON schema used by Shopify [app extensions](https://shopify.dev/docs/apps/checkout/best-practices/localizing-ui-extensions#how-it-works) and [themes](https://shopify.dev/docs/themes/architecture/locales/storefront-locale-files#usage).    |
 
 This template combines a number of third party open source tools:
 
@@ -185,7 +185,7 @@ You can use the [ShopifyAPI](https://github.com/Shopify/shopify-api-ruby) gem to
 * [Make a GraphQL Storefront API call](https://github.com/Shopify/shopify-api-ruby/blob/main/docs/usage/graphql_storefront.md)
 * [Make a Rest Admin API call](https://github.com/Shopify/shopify-api-ruby/blob/main/docs/usage/rest.md)
 
-Examples from this app template: 
+Examples from this app template:
 * Making Admin **GraphQL** API request to create products:
     * `ProductCreator#create` (web/app/services/product_creator.rb)
 * Making Admin **Rest** API request to count products:
@@ -312,3 +312,26 @@ pnpm run dev --reset
     - [`useTranslation` hook](https://react.i18next.com/latest/usetranslation-hook)
     - [`Trans` component usage with components array](https://react.i18next.com/latest/trans-component#alternative-usage-components-array)
   - [i18n-ally VS Code extension](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
+
+
+## Gems Used
+
+### service_actor (~> 3.6.0)
+
+Purpose: Provides a framework for organizing business logic into small, manageable units called "actors". This helps in creating clear, reusable, and maintainable service objects.
+Usage: Define actors to encapsulate individual units of work and use them to perform complex operations in a structured manner.
+
+### service_actor-rails
+
+Purpose: Integrates service_actor with Rails, providing generators and additional features to streamline the creation and management of actors within a Rails application.
+Usage: Use Rails generators to create actors and benefit from enhanced integration with the Rails framework.
+
+### sidekiq
+
+Purpose: A background processing tool for handling asynchronous jobs in Ruby on Rails applications. It uses threads to handle many jobs at the same time, making it more efficient than traditional process-based background job frameworks.
+Usage: Define workers to perform background tasks, such as sending emails or processing data, and configure Sidekiq to manage job queues and execution.
+
+### config
+
+Purpose: Provides a simple and flexible way to manage application configuration settings, allowing for easy definition, access, and overriding of settings for different environments.
+Usage: Define configuration settings in YAML files under the config/settings directory and access them throughout the application using the Settings object.

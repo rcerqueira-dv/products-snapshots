@@ -13,15 +13,14 @@ Rails.application.routes.draw do
 
   scope path: :api, format: :json do
     # POST /api/products and GET /api/products/count
-    resources :products, only: :create do
+    resources :products, only: [:create, :index] do
       collection do
         get :count
       end
     end
-
     namespace :v1 do
+      resources :snapshot_settings, only: [:show, :update]
       resources :product_snapshots
-      resources :settings, except: [:new, :create, :destroy]
     end
   end
 

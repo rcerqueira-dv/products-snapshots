@@ -12,6 +12,7 @@ module ShopifyAppTemplateRuby
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults(7.0)
+    config.autoload_paths += %W(#{config.root}/app/controllers)
 
     config.assets.prefix = "/api/assets"
     config.hosts << "complete-gator-teaching.ngrok-free.app"
