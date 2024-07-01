@@ -2,6 +2,8 @@
 
 module V1
   class ProductSnapshotsController < AuthenticatedController
+    include ProductSnapshotParams
+
     before_action :set_product_snapshot, only: %i[show update destroy]
 
     # GET /api/v1/product_snapshots
@@ -17,19 +19,11 @@ module V1
 
     # POST /api/v1/product_snapshots
     def create
-      result = ProductsSnapshot::Create.result(receipt_params)
+      result = ProductsSnapshot::Create.result(create_product_snapshot_params)
       if result.success?
-        render json: { number: result.response[:number], type: result.response[:type], url: result.response[:url] }
+        render json: { product_snapshot: result.response[:product_snapshot] }, status: :created
       else
         render json: { error: result[:error] }, status: :unprocessable_entity
-      end
-
-      @product_snapshot = ProductSnapshot.new(product_snapshot_params)
-
-      if @product_snapshot.save
-        render json: @product_snapshot, status: :created
-      else
-        render json: @product_snapshot.errors, status: :unprocessable_entity
       end
     end
 
@@ -53,8 +47,6 @@ module V1
       @product_snapshot = ProductSnapshot.find(params[:id])
     end
 
-    def product_snapshot_params
-      params.require(:product_snapshot).permit(:name, :products, :create_date, :type, :last_restored)
-    end
+
   end
 end

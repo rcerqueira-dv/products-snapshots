@@ -3,7 +3,7 @@
 client_id = "e1bf507384b33ba72da1b5375d7b3bfa"
 name = "snapshots 2"
 handle = "snapshots-2"
-application_url = "https://rc-ideal-missions-announcements.trycloudflare.com"
+application_url = "https://schema-ratios-upper-prince.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://rc-ideal-missions-announcements.trycloudflare.com/auth/callback",
-  "https://rc-ideal-missions-announcements.trycloudflare.com/auth/shopify/callback",
-  "https://rc-ideal-missions-announcements.trycloudflare.com/api/auth/callback"
+  "https://schema-ratios-upper-prince.trycloudflare.com/auth/callback",
+  "https://schema-ratios-upper-prince.trycloudflare.com/auth/shopify/callback",
+  "https://schema-ratios-upper-prince.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

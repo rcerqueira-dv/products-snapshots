@@ -6,7 +6,7 @@ import {
 import { TitleBar } from "@shopify/app-bridge-react";
 import { useTranslation, Trans } from "react-i18next";
 
-import ProductSnapshotCreateForm from '../../components/products_snapshots/ProductSnapshotCreateForm';
+import ProductSnapshotCreate from '../../components/products_snapshots/ProductSnapshotCreate';
 
 const CreateProductSnapshotPage = () => {
 
@@ -17,7 +17,7 @@ const CreateProductSnapshotPage = () => {
       <TitleBar title={t("NavigationMenu.productSnapshot.create")} />
       <Layout>
         <Layout.Section>
-          <ProductSnapshotCreateForm />
+          <ProductSnapshotCreate />
         </Layout.Section>
       </Layout>
     </Page>

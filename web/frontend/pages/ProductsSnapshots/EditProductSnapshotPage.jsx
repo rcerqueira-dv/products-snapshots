@@ -1,8 +1,8 @@
 import React from 'react'
 
-const EditProductSnapshotPage = () => {
+const EditProductSnapshotPage = ({ id }) => {
   return (
-    <div>EditProductSnapshotPage</div>
+    <div>EditProductSnapshotPage {id}</div>
   )
 }
 

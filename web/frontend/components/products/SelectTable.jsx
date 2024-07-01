@@ -5,10 +5,9 @@ import {
   Text,
   useBreakpoints,
 } from '@shopify/polaris';
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function SelectTable({ products, setProductsOptions }) {
-
+function SelectTable({ products, setProductsOptions, initialSelectedIds }) {
   const resourceName = {
     singular: 'product',
     plural: 'products',
@@ -16,6 +15,14 @@ function SelectTable({ products, setProductsOptions }) {
 
   const { selectedResources, allResourcesSelected, handleSelectionChange } =
     useIndexResourceState(products);
+
+  // Set initial selected resources
+  useEffect(() => {
+    console.log(initialSelectedIds)
+    if (initialSelectedIds) {
+      handleSelectionChange(initialSelectedIds);
+    }
+  }, [initialSelectedIds]);
 
   const rowMarkup = products.map(
     (
